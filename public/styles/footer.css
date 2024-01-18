@@ -1,0 +1,28 @@
+/* Style for the footer */
+footer {
+    background-color: #054bb4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+  }
+  
+  /* Style for the footer content */
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: white;
+  }
+  
+  /* Style for specific links */
+  .footer-content a {
+    text-decoration: none;
+    color: blue;
+  }
+  

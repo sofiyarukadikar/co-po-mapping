@@ -1,0 +1,61 @@
+.outer{
+   z-index: -1;
+    display: flex;
+    height: 85vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color:rgb(120, 183, 255);
+    
+    /* position: relative; */
+  }
+  .left-box{
+   position: absolute;
+   left: 0px;
+   height: 600px;
+   width: 518px;
+   background-image: url("https://i.pinimg.com/originals/db/18/5d/db185dce3857b8d0c42633cb798cf83b.png");
+  }
+  .right-box{
+   position: absolute;
+   z-index: 0;
+   right: 0px;
+   height: 600px;
+   width: 518px;
+   background-image: url("https://i.pinimg.com/originals/db/18/5d/db185dce3857b8d0c42633cb798cf83b.png");
+   transform: scaleX(-1);
+  }
+  .box{
+   background-color:rgb(232, 232, 232) ;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+ .item{
+    height: 50px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+ } 
+  
+ .item-drop{
+    height: 50px;
+    width: 100px;
+    margin: 20px;
+ } 
+ .special-img 
+{
+    position: relative;
+    top: -5px;
+    float: left;
+    left: -5px;
+}
+  

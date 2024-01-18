@@ -1,0 +1,79 @@
+<%- include("partials/header.ejs") %>
+
+<div class="outer">
+<div class="left-box"></div>
+    <div class="box"> 
+      <form action="/submit" method="POST">
+        <input type="hidden" name="userId" value="<%= user %>">
+        <label for="year" >Choose a year:</label>
+        <br>
+        <select name="year" id="year" class="item">
+          <option value="FYSEM1">FYSEM1</option>
+          <option value="FYSEM2">FYSEM2</option>
+          <option value="SYSEM1">SYSEM1</option>
+          <option value="SYSEM2">SYSEM2</option>
+          <option value="TYSEM1">TYSEM1</option>
+          <option value="TYSEM2">TYSEM2</option>
+          
+        </select>
+        <br>
+       
+        <label for="subject">Choose a subject:</label>
+        <br>
+        <select name="subject" id="subject" class="item">
+       
+        </select>
+        <br><br>
+        <input type="submit" value="Submit" class="btn  btn-primary btn-outline-light">
+      </form>
+     <div class="right-box"></div>
+      <script>
+        const uname="<%= name %>";
+        function updateSubjects(selectedYear) {
+          $.ajax({
+            url: "/try", // Replace with your server endpoint
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({
+              year: selectedYear,
+              name:uname
+            }),
+            success: function (res) {
+              // Clear existing options
+              $('#subject').empty();
+              
+              // Append new options
+              // res.subjects.forEach(function (subject) {
+              //   $('#subject').append('<option value="' + subject.subname + '">' + subject.subname + '</option>');
+              // });
+              if (res.subjects.length > 0) {
+                    // Subjects are available, append them to the dropdown
+                    res.subjects.forEach(function (subject) {
+                        $('#subject').append('<option value="' + subject.subname + '">' + subject.subname + '</option>');
+                    });
+                } else {
+                    // No subjects available, prompt the user
+                    $('#subject').append('<option value="" disabled selected>No allocated subjects</option>');
+                }
+            }
+          });
+        }
+        $("#year").on('change', function (event) {
+          event.preventDefault();
+          var selectedYear = $('#year').find(":selected").val();
+          updateSubjects(selectedYear);
+        });
+
+        // Initial load of subjects based on the default selected year
+        var initialYear = $('#year').find(":selected").val();
+        updateSubjects(initialYear);
+
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+
+      </script>
+      </div>
+   
+</div>
+<%- include("partials/footer.ejs") %>
