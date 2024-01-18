@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import express from "express";
 import ejs from "ejs";
 import bodyParser from "body-parser";
@@ -7,6 +9,7 @@ import session from "express-session";
 import flash from "express-flash";
 import bcrypt from "bcrypt";
 import LocalStrategy from "passport-local";
+import db from "./dbConfig.js";
 
 
 const port = 4000;
@@ -17,14 +20,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 let final = [];
 // database connectivity
-const db=new pg.Client({
-    user:"postgres",
-    host:"localhost",
-    database:"final_project",
-    password:"admin",
-    port:5432,
-  });
-db.connect();
+
 
 // formatting input data
 async function transform(inputData){
