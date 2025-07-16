@@ -1,27 +1,46 @@
-NBA-CO-PO Mapping Project
-This project is designed to streamline the mapping between NBA Course Outcomes (CO) and Program Outcomes (PO) to help institutions maintain academic quality, ensure accreditation readiness, and promote outcome-based education.
+# NBA CO-PO Mapping Project
 
-📌 Objective
-To create a system that allows educators and administrators to:
+A tool to simplify and automate the mapping of **Course Outcomes (COs)** to **Program Outcomes (POs)** for academic institutions, in accordance with NBA (National Board of Accreditation) guidelines.
 
-Map Course Outcomes (COs) to Program Outcomes (POs)
+---
 
-Visualize the correlation between COs and POs
+## 🎯 Objective
 
-Automate the calculation of CO-PO attainment levels
+To help faculty members and academic coordinators:
 
-Generate reports for internal assessment and accreditation
+- Map **Course Outcomes (COs)** to **Program Outcomes (POs)** using defined correlation levels.
+- Automate CO-PO matrix creation and PO attainment calculations.
+- Export results for NBA documentation and accreditation purposes.
 
-🚀 Features
-Dynamic CO-PO matrix generation
+---
 
-Level-based mapping (e.g., 1-Low, 2-Medium, 3-High)
+## 🚀 Features
 
-Weighted average calculation of PO attainments
+- 📊 CO-PO matrix generation
+- 📈 Weighted attainment level calculation
+- 📥 Export reports to PDF / Excel (optional)
+- 🧮 Mapping on a scale (1 - Low, 2 - Medium, 3 - High)
+- 💡 Simple UI and intuitive workflows
 
-Easy data entry for COs and POs
+---
 
-Export reports as PDFs or Excel files (optional)
+## 🧰 Tech Stack
 
-Clean and user-friendly interface
+> _Update based on your actual stack_
 
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** Python / Node.js / PHP  
+- **Database:** MySQL / SQLite / JSON  
+- **Libraries (optional):** Chart.js, ExcelJS, jsPDF
+
+---
+
+## 🧠 How It Works
+
+1. Define the COs for a course.
+2. Map each CO to one or more POs using a 3-level scale:
+   - 1 ➝ Low
+   - 2 ➝ Medium
+   - 3 ➝ High
+3. System generates a CO-PO matrix.
+4. Calculate PO attainments using:
