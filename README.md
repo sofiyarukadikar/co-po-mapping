@@ -29,9 +29,9 @@ To help faculty members and academic coordinators:
 > _Update based on your actual stack_
 
 - **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** Python / Node.js / PHP  
-- **Database:** MySQL / SQLite / JSON  
-- **Libraries (optional):** Chart.js, ExcelJS, jsPDF
+- **Backend:**  Node.js   
+- **Database:** PostgresSQL JSON  
+- **Libraries (optional):** Chart.js, ExcelJS
 
 ---
 
